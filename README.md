@@ -1,2 +1,1 @@
-Algorithm with C++
-
+Algorithm with C/C++
