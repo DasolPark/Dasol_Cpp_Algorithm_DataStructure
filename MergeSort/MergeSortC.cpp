@@ -1,64 +1,68 @@
 #include <stdio.h>
 
 const int NUM = 8;
-int sorted[8] = {};
+int sorted[NUM] = {};
 
-void merge(int a[], int n, int mid, int m)
+void merge(int arr[], int first, int mid, int last)
 {
-  int i = n;
+  int i = first;
   int j = mid + 1;
-  int k = n;
+  int k = first;
 
-  while (i <= mid && j <= m)
+  while (i <= mid && j <= last)
   {
-    if (a[i] <= a[j])
+    if (arr[i] <= arr[j])
     {
-      sorted[k] = a[i];
+      sorted[k] = arr[i];
       i++;
     }
     else
     {
-      sorted[k] = a[j];
+      sorted[k] = arr[j];
       j++;
     }
     k++;
   }
   if (i > mid)
   {
-    for (int t = j; j <= m; j++)
+    for (int t = j; t <= last; t++)
     {
-      sorted[k] = a[t];
+      sorted[k] = arr[t];
       k++;
     }
   }
   else
   {
-    for (int t = i; i <= mid; i++)
+    for (int t = i; t <= mid; t++)
     {
-      sorted[k] = a[t];
+      sorted[k] = arr[t];
       k++;
     }
   }
 
-  for (int t = n; t <= m; t++)
-    a[t] = sorted[t];
+  for (int t = first; t <= last; t++)
+    arr[t] = sorted[t];
 }
 
-void mergeSort(int a[], int n, int m)
+void mergeSort(int arr[], int first, int last)
 {
-  if (n < m)
+  if (first < last)
   {
-    int mid = (n + m) / 2;
-    mergeSort(a, n, mid);
-    mergeSort(a, mid + 1, m);
-    merge(a, n, mid, m);
+    int mid = (first + last) / 2;
+    mergeSort(arr, first, mid);
+    mergeSort(arr, mid + 1, last);
+    merge(arr, first, mid, last);
   }
 }
 
 int main(void)
 {
-  int arr[NUM] = {7, 6, 5, 8, 3, 5, 9, 1};
+  //int arr[NUM] = {7,6,5,8,3,5,9,1};
+  int arr[NUM] = {8, 7, 6, 5, 4, 3, 2, 1};
+
   mergeSort(arr, 0, NUM - 1);
+
   for (int i = 0; i < NUM; i++)
     printf("%d ", arr[i]);
+  printf("\n");
 }
