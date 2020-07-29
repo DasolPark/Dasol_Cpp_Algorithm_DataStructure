@@ -33,7 +33,7 @@ void quickSort(int *arr, int start, int end)
   {
     quickSort(arr, start, part2 - 1);
   }
-  if (end < part2)
+  if (part2 < end)
   {
     quickSort(arr, part2, end);
   }
