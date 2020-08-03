@@ -12,9 +12,9 @@ int partition(int *arr, int start, int end)
   int pivot = arr[(start + end) / 2];
   while (start <= end)
   {
-    while (arr[start] < pivot) // pivot값보다 큰 값 찾기
+    while (arr[start] < pivot) // pivot값보다 큰 값 찾기(>사용하면 내림차순)
       start++;
-    while (arr[end] > pivot) // pivot값보다 작은 값 찾기
+    while (arr[end] > pivot) // pivot값보다 작은 값 찾기(<사용하면 내림차순)
       end--;
     if (start <= end)
     {

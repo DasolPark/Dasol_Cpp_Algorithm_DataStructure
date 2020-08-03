@@ -1,3 +1,5 @@
+// Bubble Sort ( O(n^2) )
+
 #include <stdio.h>
 
 int main(void)

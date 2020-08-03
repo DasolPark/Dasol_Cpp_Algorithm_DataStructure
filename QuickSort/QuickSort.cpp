@@ -1,3 +1,5 @@
+// Quick Sort ( O(n^2), worst O(n^2) )
+
 #include <stdio.h>
 
 const int NUM = 10;

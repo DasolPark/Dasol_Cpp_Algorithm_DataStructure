@@ -1,3 +1,6 @@
+// Merge Sort ( O(n log n) )
+// sorted array를 만들어 메모리를 추가적으로 사용해야하는 단점
+
 #include <stdio.h>
 
 const int NUM = 8;
@@ -11,7 +14,7 @@ void merge(int arr[], int first, int mid, int last)
 
   while (i <= mid && j <= last)
   {
-    if (arr[i] <= arr[j])
+    if (arr[i] <= arr[j]) // Descending( > )
     {
       sorted[k] = arr[i];
       i++;
