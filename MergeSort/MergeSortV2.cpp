@@ -14,7 +14,7 @@ void merge(int *arr, int *tmp, int start, int mid, int end)
 
   while (part1 <= mid && part2 <= end)
   {
-    if (tmp[part1] <= tmp[part2])
+    if (tmp[part1] <= tmp[part2]) // Descending( > )
     {
       arr[index] = tmp[part1];
       part1++;
