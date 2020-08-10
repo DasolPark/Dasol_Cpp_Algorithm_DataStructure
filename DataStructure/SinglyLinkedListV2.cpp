@@ -1,4 +1,4 @@
-// Singly Linked List V2(Divide Node & list class, use head)
+// Singly Linked List V2(Divide Node & list class, use head) DS Ver
 
 #include <stdio.h>
 

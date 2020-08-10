@@ -1,3 +1,4 @@
+// Runner Technique, Remove Duplications
 // Q. 정렬이 되지 않은 Linked List에서, 중복값을 삭제하라
 // (단, 별도의 버퍼는 사용하지 않는다)
 

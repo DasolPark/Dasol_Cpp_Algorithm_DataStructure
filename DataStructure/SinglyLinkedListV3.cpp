@@ -1,10 +1,12 @@
+// Node inside of Singly Linked List
+
 #include <iostream>
 
 using namespace std;
 
 class SinglyLinkedList
 {
-  class Node
+  class Node // Node class가 먼저 선언돼야 밑에서 사용할 수 있음
   {
   public:
     int data;
