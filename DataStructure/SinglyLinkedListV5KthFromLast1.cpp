@@ -1,3 +1,6 @@
+// Kth From Last Node
+// Q. 단방향 Linked List의 끝에서 K번째 '노드'를 찾는 알고리즘을 구현하시오.
+
 // Solution 1(Count)
 
 #include <iostream>

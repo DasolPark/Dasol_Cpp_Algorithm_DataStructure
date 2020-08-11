@@ -1,14 +1,13 @@
-// Kth From Last Node
-// Q. 단방향 Linked List의 끝에서 K번째 '노드'를 찾는 알고리즘을 구현하시오.
-
-// Solution 2 (Recursion - return data)
-// 길이를 N으로 볼 때, 공간복잡도는 O(N)
-// 최악의 경우 끝까지 갔다가 처음으로 돌아와야 하므로 시간복잡도는 O(2N) 따라서 O(N)
-// Time complexity: O(N), Space complexity: O(N)
+// Q. 단방향 Linked List에서 중간에 있는 노드를 삭제하시오.
+// (단, 당신은 첫 번째 노드가 어디에 있는지 모르고, 오직 삭제할 노드만 가지고 있다)
+// 사실 첫 번째 노드를 이해하지 못 하는 것은 불가능이며
+// 다음 노드의 값을 이용한다는 Idea를 중점적으로 생각할 것
 
 #include <iostream>
 
 using namespace std;
+
+int ref = 0;
 
 class Node
 {
@@ -87,20 +86,58 @@ public:
     return this->header;
   }
 
-  int kthFromLast(Node *n, int k)
+  Node *kthFromLast(Node *first, int k)
   {
-    if (n == NULL)
+    Node *p1 = first; // Rear
+    Node *p2 = first;
+
+    for (int i = 0; i < k; i++)
     {
-      return 0;
+      if (p1 == NULL) // k번째 Node가 없을 경우 return NULL;
+      {
+        return NULL;
+      }
+      p1 = p1->next;
+    }
+    while (p1 != NULL) // Important
+    {
+      p1 = p1->next;
+      p2 = p2->next;
+    }
+    return p2;
+  }
+
+  Node *getNode(int num)
+  {
+    Node *n = this->header;
+
+    if (num == 1)
+    {
+      return n;
     }
 
-    int count = kthFromLast(n->next, k) + 1;
-    if (count == k)
+    for (int i = 1; i < num; i++)
     {
-      cout << k << "th from last node is " << n->data << endl;
+      n = n->next;
     }
+
+    return n;
   }
 };
+
+bool deleteNode(Node *target)
+{
+  if (target == NULL || target->next == NULL) // Node가 없거나 마지막 Node
+  {
+    return false;
+  }
+
+  Node *next = target->next;
+  target->data = next->data;
+  target->next = next->next;
+
+  return true;
+}
 
 int main(void)
 {
@@ -113,8 +150,10 @@ int main(void)
   sll->append(5);
   sll->retrieve();
 
-  int k = 2;
-  sll->kthFromLast(sll->getFirst(), k);
+  int num = 2;
+  // cout << "Data of " << num << "th node is " << sll->getNode(num)->data << endl;
+  deleteNode(sll->getNode(num));
+  sll->retrieve();
 
   return 0;
 }
