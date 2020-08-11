@@ -9,8 +9,6 @@
 
 using namespace std;
 
-int ref = 0;
-
 class Node
 {
 public:
