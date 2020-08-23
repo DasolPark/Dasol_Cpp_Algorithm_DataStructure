@@ -62,8 +62,8 @@ public:
     Node *n = this->header;              // next
     while (n != NULL && n->next != NULL) // Important part of (n != NULL)
     {
-      Node *r = n; // Runner
-      while (r->next != NULL)
+      Node *r = n;            // Runner
+      while (r->next != NULL) // 여기에 (r != NULL) 조건을 주면 아래 if 조건에서 r->next->data를 읽지 못하고 오류 발생
       {
         if (r->next->data == n->data)
         {
