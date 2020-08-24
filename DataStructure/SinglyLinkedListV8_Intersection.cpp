@@ -101,9 +101,18 @@ int main(void)
   Node *n5 = n4->addNext(7);
   Node *n6 = n5->addNext(6);
 
+  /* Intersection example*/
   Node *m1 = new Node(6);
   Node *m2 = m1->addNext(8);
   Node *m3 = m2->addNext(n4);
+
+  /* No intersection example*/
+  // Node *m1 = new Node(1);
+  // Node *m2 = m1->addNext(2);
+  // Node *m3 = m2->addNext(3);
+  // Node *m4 = m3->addNext(4);
+  // Node *m5 = m4->addNext(5);
+  // Node *m6 = m5->addNext(6);
 
   Node *n = getIntersection(n1, m1);
 
@@ -118,3 +127,10 @@ int main(void)
 
   return 0;
 }
+
+/*
+  교차점이 있는 Linked List인지 확인하라고 묻는다면, 그냥 처음부터 끝까지 탐색하여
+  각 List의 마지막 주소를 반환하고 같은지 다른지 비교하면 된다.
+  하지만, 해당 노드를 반환해야하므로 길이를 맞춰준 후 처음부터 끝까지 탐색한다.
+  주소가 같은 노드를 찾는다면 return 해당노드, 그렇지 않다면 return NULL
+*/
