@@ -14,16 +14,12 @@
 - [ ] Graph
 
 # How to use C/C++ in VSC
+- https://code.visualstudio.com/docs/cpp/config-mingw
+- Do not use 'Bash shell' with C/C++
 
 ## Extensions
 - 'C/C++' from Microsoft
 - 'Code Runner' from Jun Han(check 'Run in terminal' for user input)
 
 ## MinGW
-- http://mingw.org/
-- Click Download category and download 'mingw-get-setup.exe'
-- Check 'mingw32-base.bin' and 'mingw32-gcc-g++.bin'
-- Click Installation -> Apply Changes -> Apply -> Close
-- Open C: -> bin -> Copy path
-- Open 'Control Panel' -> System and Security -> System -> Advanced system settings -> Environment Variables -> Edit 'System variables's Path' -> New 'C:\MinGW\bin'
-- cmd -> gcc --version
+- Mingw-w64
