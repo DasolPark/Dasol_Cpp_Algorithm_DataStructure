@@ -41,10 +41,12 @@
 ## STL(Standard Template Library)과 함수 인자
 
 ### 함수 인자
+
 - C++에는 참조자(Reference)가 있다. ex) int &a
 - struct는 값을 복사하여 사용하기 때문에 참조할 수 없다(Call by value)
 
 ### STL
+
 - vector: 가변 배열
 - vector 또한 call by value. 따라서, Reference를 사용해야 한다.(O(N)을 O(1)로 만들 수 있는 경우가 있다 ex)크기 비교 로직)
 
@@ -67,6 +69,7 @@
 - 결론: 위 설정 후에는 cin/cout만 사용하라
 
 ## 코드 작성 팁
+
 - 코딩테스트와 개발은 다르다
 - 출력 가장 마지막에 공백 혹은 줄바꿈이 있어도 정답처리에 문제 없다(예외처리할 필요 없다)
 - 디버거는 굳이 사용하지 않아도 된다(cout을 권장 - 늪에 빠질 수가 있다)

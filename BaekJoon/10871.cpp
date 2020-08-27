@@ -1,24 +1,18 @@
 #include <iostream>
-
 using namespace std;
-
 int main() {
   ios::sync_with_stdio(0), cin.tie(0);
-
-  int N, X;
-
-  cin >> N >> X;
-
-  int A[N] = {};
-
-  for (int i = 0; i < N; i++) {
-    cin >> A[i];
+  int n, x, t;
+  cin >> n >> x;
+  while (n--) {  // ex) 10 to 1
+    cin >> t;
+    if (t < x) cout << t << ' ';
   }
-
-  for (int i = 0; i < N; i++) {
-    if (A[i] < X)
-      cout << A[i] << ' ';
-  }
-
-  return 0;
 }
+
+/*
+  X보다 작은 수(10871)
+
+  O(N)
+  n 증감을 이용해 0(false)전까지 반복한다
+*/
