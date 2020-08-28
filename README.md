@@ -74,6 +74,30 @@
 - 출력 가장 마지막에 공백 혹은 줄바꿈이 있어도 정답처리에 문제 없다(예외처리할 필요 없다)
 - 디버거는 굳이 사용하지 않아도 된다(cout을 권장 - 늪에 빠질 수가 있다)
 
+## 배열 & Vector
+
+### 배열
+
+- 메모리 상에 원소를 연속하게 배치한 자료구조
+- O(1)에 k번째 원소를 확인/변경 가능(단, 임의의 위치에 원소를 추가/제거는 O(N))
+- 추가적으로 소모되는 메모리의 양(=overhead)이 거의 없음
+- Cache hit rate가 높음
+- 메모리 상에 연속한 구간을 잡아야 하기 때문에 할당에 제약이 걸림
+
+#### 배열 초기화
+- memset()은 실수할 여지가 많으니 비추천
+- **fill()** 추천(algorithm header)
+  
+### Vector
+
+- 배열의 거의 동일한 기능을 수행하는 구조 But, 크기를 자유자재로 늘이거나 줄일 수 있다
+- STL iterator 기능을 알면 이해하기 더 좋다(why? v.begin() + x)
+- push_back, pop_back은 제일 끝에 원소를 추가하거나 빼는 것이니 O(1)
+- push_front, pop_front는 가장 앞에 원소를 추가하거나 빼는 것이니 O(N)
+- '='를 사용하면 deep copy(v1 = v2)
+- range-based for loop(since c++11) 사용하여 전체 순회 가능
+- vector의 size()는 unsigned int를 반환(unsigned int overflow 발생 가능)
+
 ## Sort
 
 - [x] Selection Sort( O(n^2) )

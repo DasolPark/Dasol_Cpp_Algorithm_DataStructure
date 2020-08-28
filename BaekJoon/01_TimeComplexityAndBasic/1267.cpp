@@ -11,6 +11,14 @@ int main() {
     sm += (((u / 60) + 1) * 15);
   }
   sy == sm ? cout << "Y M " << sy : (sy < sm ? cout << "Y " << sy : cout << "M " << sm);
+  // 아래와 같은 식
+  // if(sy == sm){
+  //   cout << "Y M " << sy;
+  // }else if(sy < sm){
+  //   cout << "Y " << sy;
+  // }else{
+  //   cout << "M " << sm;
+  // }
 }
 
 /*

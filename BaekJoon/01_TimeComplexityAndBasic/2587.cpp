@@ -19,7 +19,7 @@ int main() {
   평균은 sum/N, 중앙값은 a[2]를 출력
 */
 
-/* 2. selection sort를 이용한 풀이 */
+/* 2. selection sort를 이용한 풀이 O(N^2)*/
 /*
 #include <bits/stdc++.h>
 #define N 5

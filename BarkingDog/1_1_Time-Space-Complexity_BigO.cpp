@@ -95,3 +95,26 @@ int main() {
   Q3) O(root N)
   Q4) O(log N)
 */
+
+/* Q2 O(N) 답 */
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int func2(int arr[], int N) {
+  int occur[101] = {};
+  for (int i = 0; i < N; i++) {
+    if (occur[100 - arr[i]] == 1)  // == (occur[100-arr[i]])
+      return 1;
+    occur[arr[i]] = 1;
+  }
+  return 0;
+}
+
+int main() {
+  ios::sync_with_stdio(false), cin.tie(nullptr);
+  int arr[8] = {1, 23, 40, 47, 53, 60, 77, 99};
+
+  cout << func2(arr, 8);
+}
+*/
