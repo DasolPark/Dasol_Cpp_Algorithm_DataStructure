@@ -77,7 +77,7 @@
 ## 배열 & Vector
 - range-based for loop(since c++11) 사용하여 전체 순회 가능
 
-### 배열
+### 배열(Array)
 
 - 메모리 상에 원소를 연속하게 배치한 자료구조
 - O(1)에 k번째 원소를 확인/변경 가능(단, 임의의 위치에 원소를 추가/제거는 O(N))
@@ -97,6 +97,26 @@
 - push_front, pop_front는 가장 앞에 원소를 추가하거나 빼는 것이니 O(N)
 - '='를 사용하면 deep copy(v1 = v2)
 - vector의 size()는 unsigned int를 반환(unsigned int overflow 발생 가능)
+
+## 연결리스트(Linked List)
+
+- k번째 원소를 확인/변경하기 위해서는 O(k)가 필요함
+- 임의의 위치 원소 추가/제거는 O(1)
+- 원소들이 메모리 상에 연속하게 있지 않아 Cache hit rate이 낮지만, 할당이 다소 쉬움
+- Singly Linked List, Doubly Linked List, Circular Linked List
+- list(STL - Doubly Linked List)
+
+### Array VS Linked List
+
+|               항목               | 배열  | 연결 리스트 |
+| :------------------------------: | :---: | :---------: |
+|        k번째 원소에 접근         | O(1)  |    O(k)     |
+|    임의 위치에 원소 추가/제거    | O(N)  |    O(1)     |
+|         메모리 상의 배치         | 연속  |   불연속    |
+| 추가적으로 필요한 공간(overhead) |   X   |    O(N)     |
+
+- 배열과 연결리스트 모두 선형 자료구조
+- 연결리스트 문제는 딱히 응용해서 낼 만한 게 없고, 원소들을 이동하다가 삭제/삽입하는 문제들이 대부분
 
 ## Sort
 
