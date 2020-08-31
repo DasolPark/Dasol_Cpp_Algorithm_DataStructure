@@ -1,25 +1,21 @@
-#include <algorithm>
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main() {
-  int a[3] = {};
-  int count[3] = {0};
+  ios::sync_with_stdio(false), cin.tie(nullptr);
+  int a, b, c;
+  cin >> a >> b >> c;
 
-  cin >> a[0] >> a[1] >> a[2];
-  sort(a, a + 3);
-
-  if (a[0] == a[1] && a[0] == a[2])
-    cout << 10000 + (a[0] * 1000) << endl;
-  else if ((a[0] == a[1]) || (a[0] == a[2]))
-    cout << 1000 + (a[0] * 100) << endl;
-  else if (a[1] == a[2])
-    cout << 1000 + (a[1] * 100) << endl;
-  else
-    cout << a[2] * 100 << endl;
-
-  return 0;
+  if (a == b && b == c && c == a) {
+    cout << 10000 + (a * 1000);
+  } else if (a == b || a == c) {
+    cout << 1000 + (a * 100);
+  } else if (b == c) {
+    cout << 1000 + (b * 100);
+  } else {
+    a > b ? (a > c ? cout << a * 100 : cout << c * 100) : (b > c ? cout << b * 100 : cout << c * 100);
+  }
 }
 
 /* 

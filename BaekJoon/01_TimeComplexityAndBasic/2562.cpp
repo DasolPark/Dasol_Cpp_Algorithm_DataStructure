@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 #define N 9
 using namespace std;
+
 int main() {
   ios::sync_with_stdio(false), cin.tie(nullptr);
-  int a[N] = {};
-  for (int i = 0; i < N; i++) cin >> a[i];
-  int indexOfMax = 0;
-  for (int i = 0; i < N; i++)
-    if (a[indexOfMax] <= a[i]) indexOfMax = i;
+  int indexOfMax = 0, a[N] = {};
+  for (int i = 0; i < N; i++) {
+    cin >> a[i];
+    if (a[indexOfMax] < a[i]) indexOfMax = i;
+  }
 
-  cout << a[indexOfMax] << "\n";
-  cout << indexOfMax + 1;
+  cout << a[indexOfMax] << '\n'
+       << indexOfMax + 1;
 }
 
 /*

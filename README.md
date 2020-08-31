@@ -75,6 +75,7 @@
 - 디버거는 굳이 사용하지 않아도 된다(cout을 권장 - 늪에 빠질 수가 있다)
 
 ## 배열 & Vector
+- range-based for loop(since c++11) 사용하여 전체 순회 가능
 
 ### 배열
 
@@ -95,7 +96,6 @@
 - push_back, pop_back은 제일 끝에 원소를 추가하거나 빼는 것이니 O(1)
 - push_front, pop_front는 가장 앞에 원소를 추가하거나 빼는 것이니 O(N)
 - '='를 사용하면 deep copy(v1 = v2)
-- range-based for loop(since c++11) 사용하여 전체 순회 가능
 - vector의 size()는 unsigned int를 반환(unsigned int overflow 발생 가능)
 
 ## Sort
