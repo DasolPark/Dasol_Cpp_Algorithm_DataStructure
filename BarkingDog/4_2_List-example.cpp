@@ -17,3 +17,9 @@ int main(void) {
   for (list<int>::iterator it = L.begin(); it != L.end(); it++)
     cout << *it << ' ';
 }
+
+/*
+  list.begin()은 첫 노드를, list.end()는 마지막노드의 오른쪽 노드를 가리킨다(?)
+  insert(iterator, value)는 iterator가 가리키는 곳 앞에 값을 넣음
+  erase(iterator)는 지운 후 오른쪽 노드를 반환
+*/
