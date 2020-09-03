@@ -5,18 +5,23 @@ int main() {
   int n;
   cin >> n;
   for (int row = 0; row < n; row++) {
-    for (int col = 0; col <= row; col++) cout << '*';
+    for (int col = 0; col < n; col++) {
+      if (col >= row)
+        cout << '*';
+      else
+        cout << ' ';
+    }
     cout << '\n';
   }
 }
 
 /*
-  별 찍기 - 1(2438)
+  별 찍기 - 4(2441)
 
   O(N^2)
-  *
-  **
-  ***
-  ****
   *****
+   ****
+    ***
+     **
+      *
 */
