@@ -7,8 +7,8 @@ int main() {
   int a[n] = {};
   for (int i = 0; i < n; i++) cin >> a[i];
   cin >> v;
-  for (int i = 0; i < n; i++)
-    if (a[i] == v) count++;
+  for (auto n : a)
+    if (n == v) count++;
   cout << count;
 }
 

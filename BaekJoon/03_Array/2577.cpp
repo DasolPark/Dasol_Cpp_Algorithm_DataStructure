@@ -1,21 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int MX = 1000000000;
+int arr[10];
 int main() {
   ios::sync_with_stdio(0), cin.tie(0);
-  int a, b, c;
+  int a, b, c, result;
   cin >> a >> b >> c;
-  int result = a * b * c;
-
-  int checker[10] = {0};
-
-  while (result != 0) {
-    checker[result % 10]++;
+  result = a * b * c;
+  while (result) {
+    arr[result % 10]++;
     result /= 10;
   }
-  for (int i = 0; i < 10; i++) {
-    cout << checker[i] << ' ';
-  }
+  for (auto n : arr) cout << n << '\n';
 }
 
 /*
