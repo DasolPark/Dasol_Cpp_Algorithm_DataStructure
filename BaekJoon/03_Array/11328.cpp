@@ -5,18 +5,14 @@ int main() {
   int n;
   cin >> n;
   while (n--) {
-    int a[26] = {}, b[26] = {};
-    string aIn, bIn;
+    int arr[26] = {};
     bool isPossible = true;
-    cin >> aIn >> bIn;
-    for (auto alp : aIn) a[alp - 'a']++;
-    for (auto alp : bIn) b[alp - 'a']++;
-    for (int i = 0; i < 26; i++) {
-      if (a[i] != b[i]) {
-        isPossible = false;
-        break;
-      }
-    }
+    string a, b;
+    cin >> a >> b;
+    for (auto c : a) arr[c - 'a']++;
+    for (auto c : b) arr[c - 'a']--;
+    for (auto num : arr)
+      if (num != 0) isPossible = false;
     cout << (isPossible ? "Possible" : "Impossible") << '\n';
   }
 }
