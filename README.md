@@ -122,16 +122,31 @@
 
 ## 스택(Stack)
 
-- FILO(First In Last Out)
+- FILO(First In Last Out) or LIFO(Last In First Out)
 - One of Restricted Structure(Stack, Queue, Deque(Double-ended queue))
 - 배열 또는 연결리스트로 구현 가능
 - [STL] stack\<Type> push(), pop(), top(), empty(), size()
 
 ### 스택의 성질
-1. 원소의 추가 O(1)
-2. 원소의 제거 O(1)
-3. 최상단의 원소 확인 O(1)
+1. 원소 추가 O(1)
+2. 원소 제거 O(1)
+3. 최상단 원소 확인 O(1)
 4. 최상단이 아닌 나머지 원소들의 확인/변경이 원칙적으로 불가능
+
+## 큐(Qeueue)
+
+- FIFO(First In First Out)
+- Restricted Structure
+- 배열 또는 연결리스트로 구현 가능(원형 큐로 만들어서 쓰는 것이 좋다)
+- [STL] queue\<Type> push(), pop(), front(), back(), empty(), size()
+- BFS, Flood Fill을 풀 때 주로 사용(단골 문제)
+
+### 큐의 성질
+
+1. 원소 추가 O(1)
+2. 원소 제거 O(1)
+3. 제일 앞/뒤 원소 확인 O(1)
+4. 제일 앞/뒤가 아닌 원소들의 확인/변경이 원칙적으로 불가능
 
 ## Sort
 
