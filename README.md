@@ -120,6 +120,19 @@
 - 배열과 연결리스트 모두 선형 자료구조
 - 연결리스트 문제는 딱히 응용해서 낼 만한 게 없고, 원소들을 이동하다가 삭제/삽입하는 문제들이 대부분
 
+## 스택(Stack)
+
+- FILO(First In Last Out)
+- One of Restricted Structure(Stack, Queue, Deque(Double-ended queue))
+- 배열 또는 연결리스트로 구현 가능
+- [STL] stack\<Type> push(), pop(), top(), empty(), size()
+
+### 스택의 성질
+1. 원소의 추가 O(1)
+2. 원소의 제거 O(1)
+3. 최상단의 원소 확인 O(1)
+4. 최상단이 아닌 나머지 원소들의 확인/변경이 원칙적으로 불가능
+
 ## Sort
 
 - [x] Selection Sort( O(n^2) )
