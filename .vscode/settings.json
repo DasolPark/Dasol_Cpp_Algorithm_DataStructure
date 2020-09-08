@@ -6,6 +6,13 @@
     "iosfwd": "cpp",
     "typeinfo": "cpp",
     "chrono": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "array": "cpp",
+    "forward_list": "cpp",
+    "string_view": "cpp"
   }
 }
