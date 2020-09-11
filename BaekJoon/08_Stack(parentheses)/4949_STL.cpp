@@ -14,7 +14,7 @@ int main(void) {
       if (c == '(' || c == '[') {
         S.push(c);
       } else if (c == ')') {
-        if (S.empty() || S.top() != '(') {
+        if (S.empty() || S.top() != '(') {  // Short cut evaluation
           isValid = false;
           break;
         }
